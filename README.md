@@ -48,6 +48,13 @@ pnpm build
 - Pagesを利用する場合は **Settings → Pages → Build and deployment → GitHub Actions** を設定し、Actionsの`Deploy GitHub Pages`を手動実行してください。テンプレート自体は自動公開しません。
 - この雛形のCI・Pagesは`naoiw/.github`の共通ワークフローをSHA固定で参照します。
 
+## 依存関係の保守
+
+- `.github/dependabot.yml` でpnpm依存とGitHub Actionsを**月次**確認します（pnpmのエコシステム名は`npm`）。
+- minor/patch更新をまとめ、major更新は個別PRで検証します。**自動マージはしません**。
+- GitHub側の`Dependency graph`、`Dependabot alerts`、`Dependabot security updates`は各リポジトリのSettingsで別途確認してください。
+- 共通workflowのSHA更新は、`naoiw/.github` のリリースを確認したうえでPRで検証します。
+
 ## ドキュメント
 
 - [アーキテクチャ](docs/ARCHITECTURE.md)
@@ -69,5 +76,6 @@ pnpm build
 - [ ] LICENSEの著作権者と年を確認する
 - [ ] `pnpm install`でlockfileを更新し、`pnpm build`を確認する
 - [ ] Pagesを使う場合だけ公開先を設定する
+- [ ] GitHub側のDependabot/Dependency graph設定を確認する
 
 </details>
