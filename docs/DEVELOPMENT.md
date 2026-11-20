@@ -19,3 +19,9 @@ Node.js 26 / pnpm 9.14.2 を使用します。pnpmが未導入の場合は `npm 
 
 ## AI指示
 `AGENTS.md` などのAIルールを `naoiw/.github` の同期テンプレートから導入します。プロジェクト固有の指示は管理領域の外に記述します。
+
+## Dependabot
+
+`.github/dependabot.yml` はこのテンプレートから作成した新規リポジトリにも複製されます。pnpm管理の依存は `package-ecosystem: npm` で更新確認し、minor/patchのみグループ化、majorは個別PRにします。GitHub Actionsも月次確認します。**自動マージはしません**。
+
+GitHub Settings → Advanced Security で `Dependency graph`、`Dependabot alerts`、`Dependabot security updates` が有効か確認します。共通workflowの参照SHA変更は、`naoiw/.github` の新しいリリースと動作検証を確認してから採用します。
