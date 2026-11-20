@@ -1,0 +1,17 @@
+name: Verify AI rule sync PR (temporary v1.1.0)
+on:
+  push:
+    branches:
+      - test/ai-sync-v1-1-0-20261121
+    paths:
+      - .github/workflows/test-ai-sync-v1.1.0.yml
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync-test:
+    uses: naoiw/.github/.github/workflows/reusable-sync-ai-rules.yml@00047e65d7e53551e2644df02d2f22743ea2c471
+    with:
+      source-ref: main
