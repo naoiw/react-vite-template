@@ -25,10 +25,11 @@
 ## ローカル開発
 
 ```bash
-corepack enable
 pnpm install --frozen-lockfile
 pnpm dev
 ```
+
+pnpmが未インストールの場合は、最初に `npm install --global pnpm@9.14.2` などで導入してください。
 
 変更時のチェック：
 
