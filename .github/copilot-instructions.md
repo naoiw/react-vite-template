@@ -8,5 +8,7 @@
 - https://github.com/naoiw/.github/blob/main/standards/TECH_STACK.md
 - https://github.com/naoiw/.github/blob/main/standards/UI_STYLE.md
 
+新規Reactアプリではpnpmを標準とし、既存アプリのパッケージマネージャーは維持する。
+
 作業前にIssue/PR/README/docs/既存コードを確認。短命ブランチとPR、検証、承認後マージを基本にする。不要なdevelop、無関係な依存・UI/ライセンス変更、未確認結果の断定は禁止。外部規約へのアクセス不能時はその旨を記載し、確認できた規約を使用。
 <!-- naoiw:managed:end -->
