@@ -1,0 +1,17 @@
+name: Deploy GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  pages:
+    uses: naoiw/.github/.github/workflows/reusable-vite-pages.yml@2803c2939d96544d9243244686dad8e58b7b78b6
+    with:
+      package-manager: npm
+      node-version: "26"
+      publish-preview: false
