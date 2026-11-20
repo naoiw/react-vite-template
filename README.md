@@ -47,6 +47,7 @@ pnpm build
 - `develop`によるプレビューは必要なリポジトリにだけ追加します。
 - Pagesを利用する場合は **Settings → Pages → Build and deployment → GitHub Actions** を設定し、Actionsの`Deploy GitHub Pages`を手動実行してください。テンプレート自体は自動公開しません。
 - この雛形のCI・Pagesは`naoiw/.github`の共通ワークフローをSHA固定で参照します。
+- **main保護、Pagesの自動デプロイ化、developプレビューの追加手順**は [開発・デプロイ](docs/DEVELOPMENT.md#新しいリポジトリを作ったら) に記載しています。詳細なYAML例は [共通セットアップガイド](https://github.com/naoiw/.github/blob/main/standards/NEW_WEB_APP_SETUP.md) を参照してください。
 
 ## 依存関係の保守
 
@@ -75,7 +76,9 @@ pnpm build
 - [ ] `index.html`、`src/App.tsx`の表示名を変更する
 - [ ] LICENSEの著作権者と年を確認する
 - [ ] `pnpm install`でlockfileを更新し、`pnpm build`を確認する
-- [ ] Pagesを使う場合だけ公開先を設定する
+- [ ] Pagesを使う場合は Settings → Pages → Source: GitHub Actions を設定し、初回の手動デプロイを確認する
+- [ ] mainのPR必須・CI必須・force push/削除禁止のRulesetを設定する
+- [ ] 手動公開 / main自動公開 / main+developプレビューのどの運用を使うか決める（初期状態は手動）
 - [ ] GitHub側のDependabot/Dependency graph設定を確認する
 
 </details>
